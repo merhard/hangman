@@ -26,6 +26,14 @@ class Printer
     puts "\n#{blank_word}"
   end
 
+  def display_already_guessed_letters(letters)
+    print "\nAlready guessed: [ "
+    letters.each do |letter|
+      print "#{letter} "
+    end
+    puts "]"
+  end
+
   def ask_guess(name)
     print "\n#{name}, guess a letter, or enter ! to solve the puzzle: "
     gets.chomp.downcase

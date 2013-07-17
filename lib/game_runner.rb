@@ -84,6 +84,7 @@ end
 
 def turn_taker(name)
   @printer.display_blank_word(@word.display_current_game)
+  @printer.display_already_guessed_letters(@word.guessed_letters)
 
   guess = @printer.ask_guess(name)
 
